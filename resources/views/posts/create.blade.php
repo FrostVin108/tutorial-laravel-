@@ -19,11 +19,11 @@
                             @csrf
 
                             <div class="form-group">
-                                <label class="font-weight-bold">GAMBAR</label>
-                                <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
+                                <label class="font-weight-bold">Umur</label>
+                                <input type="number" class="form-control @error('age') is-invalid @enderror" name="age">
                             
                                 <!-- error message untuk title -->
-                                @error('image')
+                                @error('Umur')
                                     <div class="alert alert-danger mt-2">
                                         {{ $message }}
                                     </div>
@@ -31,11 +31,11 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="font-weight-bold">JUDUL</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" placeholder="Masukkan Judul Post">
+                                <label class="font-weight-bold">Nama</label>
+                                <input type="text" class="form-control @error('Nama') is-invalid @enderror" name="Nama" value="{{ old('Nama') }}" placeholder="Masukkan Nama Anda">
                             
                                 <!-- error message untuk title -->
-                                @error('title')
+                                @error('Nama')
                                     <div class="alert alert-danger mt-2">
                                         {{ $message }}
                                     </div>
@@ -43,8 +43,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="font-weight-bold">KONTEN</label>
-                                <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Post">{{ old('content') }}</textarea>
+                                <label class="font-weight-bold">Deskripsi</label>
+                                <input type="text" class="form-control @error('Deskripsi') is-invalid @enderror" name="Deskripsi" value="{{ old('Deskripsi') }}" placeholder="Ceritakan Sedikit Hal Tentang Anda">
                             
                                 <!-- error message untuk content -->
                                 @error('content')
@@ -54,8 +54,8 @@
                                 @enderror
                             </div>
 
-                            <button type="submit" class="btn btn-md btn-primary">SIMPAN</button>
-                            <button type="reset" class="btn btn-md btn-warning">RESET</button>
+                            <button type="submit" class="btn btn-md btn-primary">Kirim</button>
+                            <button type="reset" class="btn btn-md btn-warning">Ulangi</button>
 
                         </form> 
                     </div>

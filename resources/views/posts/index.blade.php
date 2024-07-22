@@ -24,10 +24,10 @@
                         <table class="table table-bordered">
                             <thead>
                               <tr>
-                                <th scope="col">GAMBAR</th>
-                                <th scope="col">JUDUL</th>
-                                <th scope="col">CONTENT</th>
-                                <th scope="col">AKSI</th>
+                                <th scope="col">Umur</th>
+                                <th scope="col">nama</th>
+                                <th scope="col">Deskripsi</th>
+                                <th scope="col">Action</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -40,11 +40,11 @@
                                     <td>{!! $post->content !!}</td>
                                     <td class="text-center">
                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('posts.destroy', $post->id) }}" method="POST">
-                                            <a href="{{ route('posts.show', $post->id) }}" class="btn btn-sm btn-dark">SHOW</a>
-                                            <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-sm btn-primary">EDIT</a>
+                                            <a href="{{ route('posts.show', $post->id) }}" class="btn btn-sm btn-dark">Liat</a>
+                                            <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-sm btn-primary">Ubah</a>
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
+                                            <button type="submit" class="btn btn-sm btn-danger">Hilang</button>
                                         </form>
                                     </td>
                                 </tr>
